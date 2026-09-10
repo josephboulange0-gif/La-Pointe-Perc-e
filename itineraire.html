@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Itinéraire | Anniversaire à la Pointe Percée</title>
+
+    <!-- Google Fonts for Editorial Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="site-nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">Pointe Percée</a>
+            <div class="nav-links">
+                <a href="index.html">Accueil</a>
+                <a href="programme.html">Programme</a>
+                <a href="logistique.html">Équipement</a>
+                <a href="itineraire.html" class="active">Itinéraire</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section" style="padding-bottom: 40px;">
+            <div class="container text-center reveal">
+                <h1 class="editorial-title">L'Itinéraire</h1>
+                <p class="editorial-text">Du départ aux Troncs jusqu'à l'arrivée au Reposoir : le tracé complet du week-end.</p>
+            </div>
+        </section>
+
+        <section class="section map-section" style="padding-top: 0; padding-bottom: 40px;">
+            <div class="container">
+                <div class="map-wrapper reveal">
+                    <div id="map"></div>
+                </div>
+                <p class="route-note" style="text-align: center; margin-top: 16px;">Tracé recalé sur le réseau de sentiers réel (OpenStreetMap) plutôt qu'à vol d'oiseau.</p>
+            </div>
+        </section>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <h2 class="editorial-title center-title reveal" style="font-size: 2.2rem;">Le Topo, Étape par Étape</h2>
+                <div class="route-list">
+
+                    <div class="logistics-block reveal">
+                        <h3>1. Les Troncs → Col de l'Oulettaz → Refuge de Gramusset</h3>
+                        <p>Le chemin du gros du groupe, samedi matin : sentier balisé, aucune difficulté technique, en suivant la vallée du Borne jusqu'au Col de l'Oulettaz, puis jusqu'au refuge. On ne passe pas par le Col des Annes.</p>
+                        <div class="topo-badge">~3,9 km | environ 1h30 à 2h00</div>
+                    </div>
+
+                    <div class="logistics-block reveal">
+                        <h3>Variante — Chartreuse du Reposoir → Col des Annes → Gramusset</h3>
+                        <p>Réservée au petit groupe de conducteurs : ils déposent les voitures au Reposoir samedi matin, puis remontent par le Col des Annes pour rejoindre tout le monde à Gramusset.</p>
+                        <div class="topo-badge">Col des Annes → Gramusset : ~3,8 km | 1h30 à 2h00</div>
+                    </div>
+
+                    <div class="logistics-block reveal">
+                        <h3>2. Refuge de Gramusset → Sommet</h3>
+                        <p>La voie normale d'accès à la Pointe Percée : sentier de randonnée alpine, terrain rocheux, où les mains sont parfois nécessaires sur la fin. Progression prudente, en particulier de nuit à la frontale.</p>
+                        <div class="topo-badge">Dénivelé : +590m | ~2,9 km | 1h30 à 2h00</div>
+                    </div>
+
+                    <div class="logistics-block reveal">
+                        <h3>3. Sommet → Cheminées de Sallanches → Refuge de Doran</h3>
+                        <p>La partie la plus engagée du week-end : les Cheminées de Sallanches, un couloir rocheux raide qui demande une attention constante et un espacement large entre les membres du groupe. Une fois les Cheminées passées, la pente s'adoucit progressivement jusqu'au Refuge de Doran.</p>
+                        <div class="topo-badge">Cheminées : ~2h | puis ~1h30 jusqu'à Doran</div>
+                    </div>
+
+                    <div class="logistics-block reveal">
+                        <h3>4. Refuge de Doran → Col de la Forclaz → Le Reposoir</h3>
+                        <p>Longue portion de retour, essentiellement sur sentiers et pistes, sans difficulté technique mais avec un dénivelé de descente conséquent jusqu'au parking. Le vrai repas de midi est prévu au passage du Col de la Forclaz.</p>
+                        <div class="topo-badge">~3h30 avec pause à Doran (estimation à affiner)</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="editorial-footer">
+        <div class="container">
+            <p>16-18 Octobre — Célébration Alpine</p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
